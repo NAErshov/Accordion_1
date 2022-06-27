@@ -1,0 +1,52 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ===== Accordion ===== */
+
+.wrapper {
+}
+.accordion {
+}
+.accordion-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+.accordion-item__input {
+    position: absolute; /* Чтобы не смещал наш тригер */
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+}
+.accordion-item__trigger {
+    display: block;
+    padding: 20px;
+    border: 1px solid #000;
+}
+.accordion-item__content {
+    padding: 20px;
+    border: 1px solid #000;
+    border-top: none;
+    display: none;
+}
+
+.accordion-item__input:checked ~ .accordion-item__trigger {
+    background-color: aquamarine;
+}
+.accordion-item__input:checked ~ .accordion-item__content {
+    background-color: aquamarine;
+    display: block;
+}
